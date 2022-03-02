@@ -27,7 +27,9 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Vulcano_SWIR.jpg",
-    fact: "vulkan fun fact",
+    fact: "Dette er vulkanutbruddet i 2021 på Fagradalsfjall på Island rett utenfor Reykjavik. "
+    + "Dette regnes som et liteutbrudd med en sprekk på 500-1000m. "
+    + "På bildet over har vi forandret fargekanalen slik at det er lettere å detektere vulkanen.",
   },
   {
     gameMode: gameModes.kahoot,
@@ -42,7 +44,7 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Vulcano_SWIR.jpg",
-    fact: "IR brukes mye til å estimere fuktighet på jorda ettersom vann absorberer IR stråling.",
+    fact: "SWIR brukes mye til å estimere fuktighet på jorda ettersom vann absorberer IR stråling.",
   },
   {
     gameMode: gameModes.kahoot,
@@ -55,14 +57,39 @@ const tasks = [
     answer: "50 dager",
   },
   {
+    gameMode: gameModes.funFact,
+    pic: "/Dam_Combined.png",
+    fact: "",
+  },
+  {
     gameMode: gameModes.kahoot,
     pic: "/Dam_Combined.png",
     question: "Hva er det disse bildene viser?",
     alt1: "Oversvømmelse",
     alt2: "Ulike lysbølge lengder",
-    alt3: "Nedskoging",
+    alt3: "Avskoging",
     alt4: "Oppdemming",
     answer: "Oppdemming",
+  },
+  {
+    gameMode: gameModes.funFact,
+    pic: "/Tsunami_pre.jpg",
+    fact: "",
+  },
+  {
+    gameMode: gameModes.kahoot,
+    pic: "/Tsunami_post.jpg",
+    question: "Hva er det disse bildene viser?",
+    alt1: "Tsunami",
+    alt2: "Avskoging",
+    alt3: "Skogbrann",
+    alt4: "Jordskred",
+    answer: "Tsunami",
+  },
+  {
+    gameMode: gameModes.funFact,
+    pic: "/Tsunami_pre.jpg",
+    fact: "",
   },
 ];
 
