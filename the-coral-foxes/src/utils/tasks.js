@@ -83,8 +83,9 @@ const tasks = [
     fact: "",
   },
   {
-    gameMode: gameModes.kahoot,
-    pic: "/Tsunami_post.jpg",
+    gameMode: gameModes.sliderkahoot,
+    pic1: "/Tsunami_pre.jpg",
+    pic2: "/Tsunami_post.jpg",
     question: "Hva er det disse bildene viser?",
     alt1: "Tsunami",
     alt2: "Avskoging",

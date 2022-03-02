@@ -42,3 +42,10 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.MuiSlider-mark {
+  background-color: coral !important;
+  color: coral;
+  width: 5px !important;
+  height: 25px !important;
+}

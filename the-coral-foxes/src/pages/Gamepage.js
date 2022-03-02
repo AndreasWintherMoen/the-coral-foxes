@@ -7,6 +7,7 @@ import EndScreen from "../components/EndScreen";
 import KahootGameMode from "../components/gameModes/KahootGameMode";
 import PlaceMarkerGameMode from "../components/gameModes/PlaceMarkerGameMode";
 import calculateScore from "../utils/calculateScore";
+import SliderKahootGameMode from "../components/gameModes/SliderKahootGameMode";
 
 const Gamepage = ({ onEndGame }) => {
   const [index, setIndex] = useState(0);
@@ -19,7 +20,7 @@ const Gamepage = ({ onEndGame }) => {
     const taskScore = Math.round(calculateScore(task, answer));
     console.log(`Task score: ${taskScore}`);
     setScore(score + taskScore);
-    setTimeout(nextTask, 2000);
+    setTimeout(nextTask, 3000);
   };
 
   const nextTask = () => setIndex(index + 1);
@@ -33,6 +34,8 @@ const Gamepage = ({ onEndGame }) => {
       return <SliderGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
     case gameModes.kahoot:
       return <KahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+    case gameModes.sliderkahoot:
+      return <SliderKahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
     case gameModes.placeMarker:
       return (
         <PlaceMarkerGameMode task={task} onSubmitAnswer={onSubmitAnswer} />
