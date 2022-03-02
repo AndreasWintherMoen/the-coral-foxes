@@ -2,6 +2,7 @@ import gameModes from "./gameModes";
 import clamp from "./clamp";
 
 const calculateScore = (task, answer) => {
+  console.log(answer);
   switch (task.gameMode) {
     case gameModes.kahoot:
       return task.answer === answer ? 1000 : 0;

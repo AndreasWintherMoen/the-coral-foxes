@@ -67,7 +67,7 @@ const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
         src={task.pic}
         alt=""
         ref={imgRef}
-        style={{ width: "800px", justifySelf: "center" }}
+        style={{ width: "1200px", justifySelf: "center" }}
         onClick={placeMarker}
       />
       <Marker pos={mousePos} bounds={bounds} />
