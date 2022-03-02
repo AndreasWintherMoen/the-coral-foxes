@@ -14,15 +14,15 @@ const tasks = [
     pic1: "/Coral-4.8.2021.jpg",
     pic2: "/Coral-17.12.2021.jpg",
     question: "Hvor mange dager er det mellom disse bildene?",
-    answer: 968,
+    answer: 135,
     min: 0,
-    max: 2000,
+    max: 1000,
   },
   {
     gameMode: gameModes.funFact,
-    pic: "/old2.png",
+    pic: "/Coral-17.12.2021.jpg",
     // dette stemmer ikke
-    fact: "Dette bildet er fra nordsiden av Great Barrier Reef. I løpet av 2016 døde 40% av korallene i dette området! ",
+    fact: "Dette bildet er fra nordsiden av Great Barrier Reef. I løpet av 2016 døde 30% av korallene i dette området! ",
   },
   {
     gameMode: gameModes.placeMarker,
@@ -33,7 +33,9 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Vulcano_SWIR.jpg",
-    fact: "vulkan fun fact",
+    fact: "Dette er vulkanutbruddet i 2021 på Fagradalsfjall på Island rett utenfor Reykjavik. "
+    + "Dette regnes som et liteutbrudd med en sprekk på 500-1000m. "
+    + "På bildet over har vi forandret fargekanalen slik at det er lettere å detektere vulkanen.",
   },
   {
     gameMode: gameModes.kahoot,
@@ -48,7 +50,7 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Vulcano_SWIR.jpg",
-    fact: "IR brukes mye til å estimere fuktighet på jorda ettersom vann absorberer IR stråling.",
+    fact: "SWIR brukes mye til å estimere fuktighet på jorda ettersom vann absorberer IR stråling.",
   },
   {
     gameMode: gameModes.kahoot,
@@ -61,14 +63,40 @@ const tasks = [
     answer: "50 dager",
   },
   {
+    gameMode: gameModes.funFact,
+    pic: "/Dam_Combined.png",
+    fact: "",
+  },
+  {
     gameMode: gameModes.kahoot,
     pic: "/Dam_Combined.png",
     question: "Hva er det disse bildene viser?",
     alt1: "Oversvømmelse",
     alt2: "Ulike lysbølge lengder",
-    alt3: "Nedskoging",
+    alt3: "Avskoging",
     alt4: "Oppdemming",
     answer: "Oppdemming",
+  },
+  {
+    gameMode: gameModes.funFact,
+    pic: "/Tsunami_pre.jpg",
+    fact: "",
+  },
+  {
+    gameMode: gameModes.sliderkahoot,
+    pic1: "/Tsunami_pre.jpg",
+    pic2: "/Tsunami_post.jpg",
+    question: "Hva er det disse bildene viser?",
+    alt1: "Tsunami",
+    alt2: "Avskoging",
+    alt3: "Skogbrann",
+    alt4: "Jordskred",
+    answer: "Tsunami",
+  },
+  {
+    gameMode: gameModes.funFact,
+    pic: "/Tsunami_pre.jpg",
+    fact: "",
   },
 ];
 

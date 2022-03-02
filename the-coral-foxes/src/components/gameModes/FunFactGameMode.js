@@ -15,7 +15,7 @@ const FunFact = ({ funFact, onNextTask }) => (
       textAlign: "center",
     }}
   >
-    <h2>{funFact.title || "Did you know?"}</h2>
+    <h2>{funFact.title || "Informasjon"}</h2>
     <img src={funFact.pic} alt="funfact" />
     <p>{funFact.fact}</p>
     <Button variant="contained" onClick={onNextTask}>

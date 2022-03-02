@@ -2,7 +2,7 @@ const gameModes = {
   funFact: "fun-fact",
   slider: "slider",
   kahoot: "kahoot",
-  skogbrann: "skogbrann",
+  sliderkahoot: "sliderkahoot",
   placeMarker: "placeMarker",
 };
 

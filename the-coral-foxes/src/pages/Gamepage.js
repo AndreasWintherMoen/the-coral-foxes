@@ -8,6 +8,7 @@ import KahootGameMode from "../components/gameModes/KahootGameMode";
 import PlaceMarkerGameMode from "../components/gameModes/PlaceMarkerGameMode";
 import calculateScore from "../utils/calculateScore";
 import Score from "../components/Score"
+import SliderKahootGameMode from "../components/gameModes/SliderKahootGameMode";
 
 const Gamepage = ({ onEndGame }) => {
   const [index, setIndex] = useState(0);
@@ -22,6 +23,7 @@ const Gamepage = ({ onEndGame }) => {
     setTaskScore(newScore);
     setScore(totalScore + newScore);
     setTimeout(nextTask, 2000);
+
   };
 
   const nextTask = () => setIndex(index + 1);
@@ -40,6 +42,9 @@ const Gamepage = ({ onEndGame }) => {
     case gameModes.kahoot:
       gameMode =  <KahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
       break;
+    case gameModes.sliderkahoot:
+      gameMode = <SliderKahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+    break;
     case gameModes.placeMarker:
       gameMode = (
         <PlaceMarkerGameMode task={task} onSubmitAnswer={onSubmitAnswer} />
