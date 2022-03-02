@@ -11,23 +11,16 @@ const KahootButtons = ({
 }) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
-  function answer(value) {
-    console.log(value);
+  const answer = (value) => {
     setShowAnswer(true);
+    onSubmitAnswer(value);
+  };
 
-    if (value === correctAnswer) {
-      console.log("Riktig!");
-      onSubmitAnswer(1000);
-    } else {
-      console.log("Feil!");
-      onSubmitAnswer(0);
-    }
-  }
   return (
     <div style={{ width: "500px", margin: "0 auto" }}>
       <Button
         variant="contained"
-        onClick={() => answer(1)}
+        onClick={() => answer(alt1)}
         disabled={showAnswer}
         color={alt1 === correctAnswer && showAnswer ? "success" : "primary"}
       >
@@ -35,7 +28,7 @@ const KahootButtons = ({
       </Button>
       <Button
         variant="contained"
-        onClick={() => answer(2)}
+        onClick={() => answer(alt2)}
         disabled={showAnswer}
         color={alt2 === correctAnswer && showAnswer ? "success" : "primary"}
       >
@@ -43,7 +36,7 @@ const KahootButtons = ({
       </Button>
       <Button
         variant="contained"
-        onClick={() => answer(3)}
+        onClick={() => answer(alt3)}
         disabled={showAnswer}
         color={alt3 === correctAnswer && showAnswer ? "success" : "primary"}
       >
@@ -51,7 +44,7 @@ const KahootButtons = ({
       </Button>
       <Button
         variant="contained"
-        onClick={() => answer(4)}
+        onClick={() => answer(alt4)}
         disabled={showAnswer}
         color={alt4 === correctAnswer && showAnswer ? "success" : "primary"}
       >

@@ -6,14 +6,22 @@ import SliderGameMode from "../components/gameModes/SliderGameMode";
 import EndScreen from "../components/EndScreen";
 import KahootGameMode from "../components/gameModes/KahootGameMode";
 import PlaceMarkerGameMode from "../components/gameModes/PlaceMarkerGameMode";
+import calculateScore from "../utils/calculateScore";
 
 const Gamepage = ({ onEndGame }) => {
   const [index, setIndex] = useState(0);
   const [task, setTask] = useState(tasks[index]);
+  const [score, setScore] = useState(0);
 
   useEffect(() => setTask(tasks[index]), [index]);
 
-  const showAnswer = async () => setTimeout(nextTask, 2000);
+  const showAnswer = async (answer) => {
+    const taskScore = calculateScore(task, answer);
+    console.log(`Task score: ${taskScore}`);
+    setScore(score + taskScore);
+    setTimeout(nextTask, 2000);
+  };
+
   const nextTask = () => setIndex(index + 1);
 
   if (!task) return <EndScreen />;
