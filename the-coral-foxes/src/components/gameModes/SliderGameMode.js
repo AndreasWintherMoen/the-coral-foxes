@@ -16,7 +16,7 @@ const Slider = ({ task, onSubmitAnswer }) => {
     >
       <h2>{task.question}</h2>
       <ImageSlider oldPic={task.pic1} newPic={task.pic2} />
-      <div style={{ marginTop: "800px" }}>
+      <div style={{ marginTop: "500px" }}>
         <DaysSlider
           onSubmitAnswer={onSubmitAnswer}
           max={task.max}
