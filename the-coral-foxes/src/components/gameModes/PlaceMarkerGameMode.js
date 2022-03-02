@@ -26,7 +26,7 @@ const defaultBounds = {
   y2: 0,
 };
 
-const PlaceMarkerGameMode = ({ task }) => {
+const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
   const [bounds, setBounds] = useState(defaultBounds);
   const [mousePos, setMousePos] = useState(defaultMousePos);
   const imgRef = useRef(null);
@@ -52,8 +52,12 @@ const PlaceMarkerGameMode = ({ task }) => {
     });
   };
 
-  const onSubmitAnswer = () => {
+  const placeMarker = () => {
     setShowAnswer(true);
+    onSubmitAnswer({
+      x: mousePos.x - imgRef.current.offsetLeft,
+      y: mousePos.y - imgRef.current.offsetTop,
+    });
   };
 
   return (
@@ -64,7 +68,7 @@ const PlaceMarkerGameMode = ({ task }) => {
         alt=""
         ref={imgRef}
         style={{ width: "800px", justifySelf: "center" }}
-        onClick={onSubmitAnswer}
+        onClick={placeMarker}
       />
       <Marker pos={mousePos} bounds={bounds} />
       <Marker

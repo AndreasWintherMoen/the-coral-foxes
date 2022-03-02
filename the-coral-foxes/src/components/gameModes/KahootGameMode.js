@@ -7,7 +7,7 @@ const KahootGameMode = ({ task, onSubmitAnswer }) => {
 
   const selectAnswer = (answer) => {
     setShowAnswer(true);
-    onSubmitAnswer();
+    onSubmitAnswer(answer);
     correctAnswer.current = answer === task.answer;
   };
 
