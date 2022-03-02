@@ -17,7 +17,7 @@ const Gamepage = ({ onEndGame }) => {
 
   const onSubmitAnswer = async (answer) => {
     const taskScore = Math.round(calculateScore(task, answer));
-    // console.log(`Task score: ${taskScore}`);
+    console.log(`Task score: ${taskScore}`);
     setScore(score + taskScore);
     setTimeout(nextTask, 2000);
   };
