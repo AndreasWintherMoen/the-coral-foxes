@@ -2,6 +2,12 @@ import gameModes from "./gameModes";
 
 const tasks = [
   {
+    gameMode: gameModes.placeMarker,
+    question: "Hvor er vulkanen",
+    pic: "/new2.png",
+    answer: { x: 100, y: 200 },
+  },
+  {
     gameMode: gameModes.slider,
     pic1: "/old2.png",
     pic2: "/new2.png",

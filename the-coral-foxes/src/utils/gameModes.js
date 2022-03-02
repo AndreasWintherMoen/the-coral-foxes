@@ -3,6 +3,7 @@ const gameModes = {
   slider: "slider",
   kahoot: "kahoot",
   skogbrann: "skogbrann",
+  placeMarker: "placeMarker",
 };
 
 export default gameModes;
