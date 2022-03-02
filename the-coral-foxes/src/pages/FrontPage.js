@@ -8,7 +8,7 @@ const Frontpage = ({ onStartGame }) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        backgroundImage: "url(/background_pic.jpg)",
+        backgroundImage: "url(/background_empty_space.jpg)",
         height: "100vh",
         width: "100vw",
         alignItems: "center",
@@ -18,22 +18,23 @@ const Frontpage = ({ onStartGame }) => {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           color: "#ff9400",
           alignItems: "center",
           justifyContent: "center",
-          width: "40vw",
-          height: "40vh",
+          fontSize: "2em",
         }}
       >
         { <img src= "logo_korall_rev.png"
         style = {{
             display: "flex",
-            alignItems: "right",
-            height: "20vh",
+            height: "300px",
+            
         }}
         /> }
-        <h2>{"Korall Rev"}</h2>
+        <h2 style={{
+          marginTop: "0",
+        }}>{"Korallrevene"}</h2>
       </div>
 
       <div
@@ -41,12 +42,12 @@ const Frontpage = ({ onStartGame }) => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          backgroundColor: "#a44900",
+          backgroundColor: "#F55900",
           alignItems: "center",
           justifyContent: "center",
           width: "40vw",
-          height: "40vh",
-          border: "10px solid #3e1300",
+          height: "15vh",
+          border: "10px solid #6B0000",
         }}
       >
         <div
@@ -55,7 +56,7 @@ const Frontpage = ({ onStartGame }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            height: "20vh",
+            height: "5vh",
             width: "30vw",
           }}
         >
@@ -63,17 +64,19 @@ const Frontpage = ({ onStartGame }) => {
             variant="contained"
             onClick={onStartGame}
             style={{
-              backgroundColor: "#ff9400",
+              backgroundColor: "#EC839E",
               width: "20vw",
               height: "8vh",
               alignItems: "center",
               justifyContent: "center",
+              fontSize: "2em",
+              color: "#882F3E"
             }}
           >
-            New Game
+            Start
           </Button>
         </div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -84,7 +87,7 @@ const Frontpage = ({ onStartGame }) => {
           }}
         >
           <HighScoreList />
-        </div>
+        </div> */}
       </div>
     </div>
   );
