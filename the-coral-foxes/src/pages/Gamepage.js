@@ -5,8 +5,9 @@ import tasks from "../utils/tasks";
 import SliderGameMode from "../components/gameModes/SliderGameMode";
 import EndScreen from "../components/EndScreen";
 import KahootGameMode from "../components/gameModes/KahootGameMode";
+import PlaceMarkerGameMode from "../components/gameModes/PlaceMarkerGameMode";
 
-const Gamepage = ({onEndGame}) => {
+const Gamepage = ({ onEndGame }) => {
   const [index, setIndex] = useState(0);
   const [task, setTask] = useState(tasks[index]);
 
@@ -24,6 +25,8 @@ const Gamepage = ({onEndGame}) => {
       return <SliderGameMode task={task} onSubmitAnswer={showAnswer} />;
     case gameModes.kahoot:
       return <KahootGameMode task={task} onSubmitAnswer={showAnswer} />;
+    case gameModes.placeMarker:
+      return <PlaceMarkerGameMode task={task} />;
     default:
       console.log(`could not find game mode ${task.gameMode}`);
       return <EndScreen />;
