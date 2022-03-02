@@ -1,22 +1,22 @@
 import gameModes from "./gameModes";
 
 const tasks = [
-  {
-    gameMode: gameModes.kahoot,
-    pic: "/new.png",
-    question: "Hvilket alternativ?",
-    alt1: 10,
-    alt2: 15,
-    alt3: 20,
-    alt4: 25,
-    answer: 15,
-  },
-  {
-    gameMode: gameModes.placeMarker,
-    question: "Hvor er vulkanen",
-    pic: "/new2.png",
-    answer: { x: 100, y: 200 },
-  },
+  // {
+  //   gameMode: gameModes.kahoot,
+  //   pic: "/new.png",
+  //   question: "Hvilket alternativ?",
+  //   alt1: 10,
+  //   alt2: 15,
+  //   alt3: 20,
+  //   alt4: 25,
+  //   answer: 15,
+  // },
+  // {
+  //   gameMode: gameModes.placeMarker,
+  //   question: "Hvor er vulkanen",
+  //   pic: "/new2.png",
+  //   answer: { x: 100, y: 200 },
+  // },
   {
     gameMode: gameModes.slider,
     pic1: "/old2.png",

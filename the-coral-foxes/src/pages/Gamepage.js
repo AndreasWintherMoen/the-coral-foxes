@@ -16,8 +16,8 @@ const Gamepage = ({ onEndGame }) => {
   useEffect(() => setTask(tasks[index]), [index]);
 
   const onSubmitAnswer = async (answer) => {
-    const taskScore = calculateScore(task, answer);
-    console.log(`Task score: ${taskScore}`);
+    const taskScore = Math.round(calculateScore(task, answer));
+    // console.log(`Task score: ${taskScore}`);
     setScore(score + taskScore);
     setTimeout(nextTask, 2000);
   };
