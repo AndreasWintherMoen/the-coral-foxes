@@ -7,43 +7,61 @@ import EndScreen from "../components/EndScreen";
 import KahootGameMode from "../components/gameModes/KahootGameMode";
 import PlaceMarkerGameMode from "../components/gameModes/PlaceMarkerGameMode";
 import calculateScore from "../utils/calculateScore";
+import Score from "../components/Score"
 import SliderKahootGameMode from "../components/gameModes/SliderKahootGameMode";
 
 const Gamepage = ({ onEndGame }) => {
   const [index, setIndex] = useState(0);
   const [task, setTask] = useState(tasks[index]);
-  const [score, setScore] = useState(0);
+  const [totalScore, setScore] = useState(0);
+  const [taskScore, setTaskScore] = useState(0);
 
   useEffect(() => setTask(tasks[index]), [index]);
 
   const onSubmitAnswer = async (answer) => {
-    const taskScore = Math.round(calculateScore(task, answer));
-    console.log(`Task score: ${taskScore}`);
-    setScore(score + taskScore);
-    setTimeout(nextTask, 3000);
+    const newScore = Math.round(calculateScore(task, answer))
+    setTaskScore(newScore);
+    setScore(totalScore + newScore);
+    setTimeout(nextTask, 2000);
+
   };
 
   const nextTask = () => setIndex(index + 1);
 
   if (!task) return <EndScreen />;
 
+  let gameMode = <div></div>;
+
   switch (task.gameMode) {
     case gameModes.funFact:
-      return <FunFactGameMode funFact={task} onNextTask={nextTask} />;
+      gameMode = <FunFactGameMode funFact={task} onNextTask={nextTask} />;
+      break;
     case gameModes.slider:
-      return <SliderGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+      gameMode =  <SliderGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+      break;
     case gameModes.kahoot:
-      return <KahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+      gameMode =  <KahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+      break;
     case gameModes.sliderkahoot:
-      return <SliderKahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+      gameMode = <SliderKahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
+    break;
     case gameModes.placeMarker:
-      return (
+      gameMode = (
         <PlaceMarkerGameMode task={task} onSubmitAnswer={onSubmitAnswer} />
-      );
+      )
+      break;
     default:
       console.log(`could not find game mode ${task.gameMode}`);
-      return <EndScreen />;
+      gameMode = <EndScreen />;
+      break;
   }
+
+  return (
+    <>
+      <Score taskScore = {taskScore} totalScore={totalScore} /> 
+      {gameMode};
+    </> 
+  )
 };
 
 export default Gamepage;
