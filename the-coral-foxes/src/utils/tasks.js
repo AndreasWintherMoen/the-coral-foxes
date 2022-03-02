@@ -2,6 +2,12 @@ import gameModes from "./gameModes";
 
 const tasks = [
   {
+    gameMode: gameModes.funFact,
+    pic: "/bleaching.jpeg",
+    title: "Bleking av korallrev",
+    fact: "Skriv inn interessante ting her",
+  },
+  {
     gameMode: gameModes.slider,
     // pic1: "/Lizard_Island_2021-11-22.jpg",
     // pic2: "/Lizard_Island_2022-01-01.jpg",
