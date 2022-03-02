@@ -1,11 +1,12 @@
 import React from "react";
+import clamp from "../utils/clamp";
 
 const Marker = ({ pos, bounds, hide, isAnswerMarker }) => {
   if (hide) return <div></div>;
 
   const actualPos = {
-    x: Math.min(bounds.x2, Math.max(bounds.x1, pos.x)) - 25,
-    y: Math.min(bounds.y2, Math.max(bounds.y1, pos.y)) - 50,
+    x: clamp(pos.x, bounds.x1, bounds.x2) - 25,
+    y: clamp(pos.y, bounds.y1, bounds.y2) - 50,
   };
 
   return (

@@ -15,7 +15,7 @@ const Gamepage = ({ onEndGame }) => {
 
   useEffect(() => setTask(tasks[index]), [index]);
 
-  const showAnswer = async (answer) => {
+  const onSubmitAnswer = async (answer) => {
     const taskScore = calculateScore(task, answer);
     console.log(`Task score: ${taskScore}`);
     setScore(score + taskScore);
@@ -30,11 +30,13 @@ const Gamepage = ({ onEndGame }) => {
     case gameModes.funFact:
       return <FunFactGameMode funFact={task} onNextTask={nextTask} />;
     case gameModes.slider:
-      return <SliderGameMode task={task} onSubmitAnswer={showAnswer} />;
+      return <SliderGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
     case gameModes.kahoot:
-      return <KahootGameMode task={task} onSubmitAnswer={showAnswer} />;
+      return <KahootGameMode task={task} onSubmitAnswer={onSubmitAnswer} />;
     case gameModes.placeMarker:
-      return <PlaceMarkerGameMode task={task} />;
+      return (
+        <PlaceMarkerGameMode task={task} onSubmitAnswer={onSubmitAnswer} />
+      );
     default:
       console.log(`could not find game mode ${task.gameMode}`);
       return <EndScreen />;
