@@ -18,15 +18,21 @@ const Frontpage = ({ onStartGame }) => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          color: "white",
+          flexDirection: "row",
+          color: "#ff9400",
           alignItems: "center",
           justifyContent: "center",
           width: "40vw",
           height: "40vh",
         }}
       >
-        {/* <img src= "logo_example.png"/> */}
+        { <img src= "logo_korall_rev.png"
+        style = {{
+            display: "flex",
+            alignItems: "right",
+            height: "20vh",
+        }}
+        /> }
         <h2>{"Korall Rev"}</h2>
       </div>
 
@@ -35,12 +41,12 @@ const Frontpage = ({ onStartGame }) => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          backgroundColor: "white",
+          backgroundColor: "#a44900",
           alignItems: "center",
           justifyContent: "center",
           width: "40vw",
           height: "40vh",
-          border: "10px solid #EEEEEE",
+          border: "10px solid #3e1300",
         }}
       >
         <div
@@ -57,7 +63,7 @@ const Frontpage = ({ onStartGame }) => {
             variant="contained"
             onClick={onStartGame}
             style={{
-              backgroundColor: "#570f93",
+              backgroundColor: "#ff9400",
               width: "20vw",
               height: "8vh",
               alignItems: "center",
