@@ -22,12 +22,14 @@ const SliderKahootGameMode = ({ task, onSubmitAnswer }) => {
         justifySelf: "center",
         justifyContent: "center",
         alignContent: "center",
-        maxWidth: "800px",
         textAlign: "center",
+        backgroundImage: "url(/background_empty_space.jpg)",
+        height: "100vh",
+        width: "100vw",
       }}
     >
       <h2>{task.question}</h2>
-      <ImageSlider oldPic={task.pic1} newPic={task.pic2} />
+      <ImageSlider oldPic={task.pic1} newPic={task.pic2} style={{maxWidth: "800px",}}/>
       <div style={{ marginTop: "500px" }}></div>
       <p>
         {showAnswer &&

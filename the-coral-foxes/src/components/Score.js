@@ -6,10 +6,10 @@ const Score = ({taskScore, totalScore}) => {
     return(
         
         <div style ={{
-            backgroundColor: "black",
+            backgroundColor: "#F55900",
             color: "white",
-            width: "20%",
-            fontSize: "50px",
+            fontSize: "25px",
+            color: "#6B0000",
         }}
         >
             Score = {totalScore}
