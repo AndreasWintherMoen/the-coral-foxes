@@ -17,9 +17,12 @@ const ImageSlider = ({ oldPic, newPic }) => {
         style={{
           position: "absolute",
           left: "10%",
-          top: "5%",
+          top: "15%",
           width: "80%",
           height: "50%",
+          maxWidth: "2em",
+          maxHeight: "2em",
+
         }}
         src={process.env.PUBLIC_URL + oldPic}
         alt="old"
@@ -28,7 +31,7 @@ const ImageSlider = ({ oldPic, newPic }) => {
         style={{
           position: "absolute",
           left: "10%",
-          top: "5%",
+          top: "15%",
           width: "80%",
           height: "50%",
           objectFit: "cover",
@@ -42,7 +45,7 @@ const ImageSlider = ({ oldPic, newPic }) => {
         style={{
           position: "absolute",
           left: "10%",
-          top: "5%",
+          top: "15%",
           width: "80%",
           height: "50%",
           objectFit: "cover",
@@ -58,7 +61,7 @@ const ImageSlider = ({ oldPic, newPic }) => {
           position: "absolute",
           width: "2px",
           height: "50%",
-          top: "5%",
+          top: "15%",
           pointerEvents: "none",
           left:
             (mousePos && mousePos - 1) || `calc(${10 + ratio * 0.8}% - 1px)`,
