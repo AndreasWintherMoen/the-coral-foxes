@@ -10,8 +10,8 @@ const EndScreen = ({ onEndGame, score }) => {
         marginTop: "200px",
       }}
     >
-      <h2>Takk for oss!</h2>
-      <h2>Score: {score}</h2>
+      <h2 style={{ fontSize: "3em" }}>Takk for oss!</h2>
+      <h2 style={{ fontSize: "2.5em", marginTop: "2em" }}>Score: {score}</h2>
       {/* <div>
         <Button variant="contained" onClick={onEndGame}>
           Front Page
