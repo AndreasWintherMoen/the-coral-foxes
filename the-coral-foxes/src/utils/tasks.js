@@ -5,7 +5,7 @@ const tasks = [
     gameMode: gameModes.funFact,
     pic: "/bleaching.jpeg",
     title: "Bleking av korallrev",
-    fact: "Skriv inn interessante ting her",
+    fact: "29% av Great Barrier Reef er tapt pga klimaendringer. Enkelte rev over 90% tapt.",
   },
   {
     gameMode: gameModes.slider,
@@ -65,8 +65,8 @@ const tasks = [
   },
   {
     gameMode: gameModes.funFact,
-    pic: "/Fire_Timelapse.gif",
-    fact: "",
+    pic: "/Fire-Timelaps2.gif",
+    fact: "Totalt brant omtrent 300 000 km2 skog ned. Det er ca 878 Trondheimer!",
   },
   {
     gameMode: gameModes.sliderkahoot,
@@ -82,8 +82,9 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Dam_post.jpg",
-    fact: "Forskjellen på disse bildene er 2 år, fra 2019-2021. Demningen startet å fylles opp i july 2020,"
-    + " og er planlagt å bli fylt opp i 4-7 år. Den ble brukt til vannkraft for første gang 20. feb 2022.",
+    fact:
+      "Forskjellen på disse bildene er 2 år, fra 2019-2021. Demningen startet å fylles opp i july 2020," +
+      " og er planlagt å bli fylt opp i 4-7 år. Den ble brukt til vannkraft for første gang 20. feb 2022.",
   },
   {
     gameMode: gameModes.sliderkahoot,

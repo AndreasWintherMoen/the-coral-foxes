@@ -2,7 +2,7 @@ import React from "react";
 import clamp from "../utils/clamp";
 
 const Marker = ({ pos, bounds, hide, isAnswerMarker }) => {
-  if (hide) return <div></div>;
+  if (hide || isAnswerMarker) return <div></div>;
 
   const actualPos = {
     x: clamp(pos.x, bounds.x1, bounds.x2) - 25,
