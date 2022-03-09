@@ -68,8 +68,9 @@ const tasks = [
     fact: "",
   },
   {
-    gameMode: gameModes.kahoot,
-    pic: "/Dam_Combined.png",
+    gameMode: gameModes.sliderkahoot,
+    pic1: "/Dam_pre.jpg",
+    pic2: "/Dam_post.jpg",
     question: "Hva er det disse bildene viser?",
     alt1: "Oversvømmelse",
     alt2: "Ulike lysbølge lengder",
