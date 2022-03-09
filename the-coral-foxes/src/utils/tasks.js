@@ -100,7 +100,7 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Tsunami_pre.jpg",
-    fact: "",
+    fact: "Veien videre: Multiplayer? Highscore. Fikse scaling issues på nettsiden. Lage flere oppgaver.",
   },
 ];
 
