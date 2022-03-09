@@ -64,7 +64,7 @@ const tasks = [
   },
   {
     gameMode: gameModes.funFact,
-    pic: "/Dam_Combined.png",
+    pic: "/Fire_Timelapse.gif",
     fact: "",
   },
   {
@@ -80,8 +80,9 @@ const tasks = [
   },
   {
     gameMode: gameModes.funFact,
-    pic: "/Tsunami_pre.jpg",
-    fact: "",
+    pic: "/Dam_post.jpg",
+    fact: "Forskjellen på disse bildene er 2 år, fra 2019-2021. Demningen startet å fylles opp i july 2020,"
+    + " og er planlagt å bli fylt opp i 4-7 år. Den ble brukt til vannkraft for første gang 20. feb 2022.",
   },
   {
     gameMode: gameModes.sliderkahoot,
