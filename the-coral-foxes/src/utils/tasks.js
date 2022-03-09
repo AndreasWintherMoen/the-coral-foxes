@@ -55,7 +55,7 @@ const tasks = [
   },
   {
     gameMode: gameModes.kahoot,
-    pic: "/Fire-Timelapse2.gif",
+    pic: "/Fire-Timelaps2.gif",
     question: "Hvor lang tid tok det brannen å spre seg i bildet?",
     alt1: "20 dager",
     alt2: "50 dager",
