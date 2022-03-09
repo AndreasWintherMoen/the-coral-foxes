@@ -19,6 +19,8 @@ const Marker = ({ pos, bounds, hide, isAnswerMarker }) => {
         width: "50px",
         left: actualPos.x,
         top: actualPos.y,
+        maxWidth: "50%",
+        maxHeight: "50%",
       }}
     />
   );

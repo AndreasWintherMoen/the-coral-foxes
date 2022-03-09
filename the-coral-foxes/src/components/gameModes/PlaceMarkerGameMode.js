@@ -12,6 +12,9 @@ const wrapperStyle = {
   justifySelf: "center",
   alignSelf: "center",
   textAlign: "center",
+  backgroundImage: "url(/background_empty_space.jpg)",
+  height: "100vh",
+  width: "100vw",
 };
 
 const defaultMousePos = {
@@ -69,6 +72,10 @@ const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
         ref={imgRef}
         style={{ width: "1200px", justifySelf: "center" }}
         onClick={placeMarker}
+        style={{
+          maxWidth: "50%",
+          maxHeight: "50%",
+        }}
       />
       <Marker pos={mousePos} bounds={bounds} />
       <Marker
