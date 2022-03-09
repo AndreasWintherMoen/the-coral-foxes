@@ -35,11 +35,11 @@ const SliderKahootGameMode = ({ task, onSubmitAnswer }) => {
         style={{ maxWidth: "800px" }}
       />
       <div style={{ marginTop: "500px" }}></div>
-      <p style={{ color: "#ff9400" }}>
+      <p style={{ color: "#ff9400", fontSize: "2em" }}>
         {showAnswer &&
           `Svaret var ${correctAnswer.current ? "riktig" : "feil"}`}
       </p>
-      <p>
+      <p style={{ fontSize: "2em" }}>
         {showAnswer &&
           !correctAnswer.current &&
           `Riktig svar var ${task.answer}`}
