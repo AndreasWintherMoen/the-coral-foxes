@@ -20,9 +20,6 @@ const ImageSlider = ({ oldPic, newPic }) => {
           top: "15%",
           width: "80%",
           height: "50%",
-          maxWidth: "2em",
-          maxHeight: "2em",
-
         }}
         src={process.env.PUBLIC_URL + oldPic}
         alt="old"
