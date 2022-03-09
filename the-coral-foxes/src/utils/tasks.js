@@ -33,9 +33,10 @@ const tasks = [
   {
     gameMode: gameModes.funFact,
     pic: "/Vulcano_SWIR.jpg",
-    fact: "Dette er vulkanutbruddet i 2021 på Fagradalsfjall på Island rett utenfor Reykjavik. "
-    + "Dette regnes som et liteutbrudd med en sprekk på 500-1000m. "
-    + "På bildet over har vi forandret fargekanalen slik at det er lettere å detektere vulkanen.",
+    fact:
+      "Dette er vulkanutbruddet i 2021 på Fagradalsfjall på Island rett utenfor Reykjavik. " +
+      "Dette regnes som et liteutbrudd med en sprekk på 500-1000m. " +
+      "På bildet over har vi forandret fargekanalen slik at det er lettere å detektere vulkanen.",
   },
   {
     gameMode: gameModes.kahoot,
@@ -54,12 +55,12 @@ const tasks = [
   },
   {
     gameMode: gameModes.kahoot,
-    pic: "/Fire_Timelapse.gif",
+    pic: "/Fire-Timelaps2.gif",
     question: "Hvor lang tid tok det brannen å spre seg i bildet?",
-    alt1: "10 dager",
+    alt1: "20 dager",
     alt2: "50 dager",
-    alt3: "200 dager",
-    alt4: "1000 dager",
+    alt3: "100 dager",
+    alt4: "200 dager",
     answer: "50 dager",
   },
   {
