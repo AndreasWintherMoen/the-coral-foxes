@@ -12,7 +12,6 @@ const KahootGameMode = ({ task, onSubmitAnswer }) => {
   };
 
   return (
-
     <div
       style={{
         margin: "0 auto",
@@ -29,15 +28,17 @@ const KahootGameMode = ({ task, onSubmitAnswer }) => {
         color: "#ff9400",
       }}
     >
-      <h2>{task.question}</h2>
-      <img src={task.pic} alt="something" 
-      style={{
-        marginLeft: "25%",
-        maxWidth: "50%",
-        maxHeight: "50%",
-        justifyContent: "center",
-        alignContent: "center",
-      }}
+      <h2 style={{ color: "#ff9400" }}>{task.question}</h2>
+      <img
+        src={task.pic}
+        alt="something"
+        style={{
+          marginLeft: "25%",
+          maxWidth: "50%",
+          maxHeight: "50%",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
       />
       <p>
         {showAnswer &&

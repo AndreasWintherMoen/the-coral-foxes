@@ -24,7 +24,7 @@ const FunFact = ({ funFact, onNextTask }) => (
         textAlign: "center",
       }}
     >
-      <h2 style={{ fontSize: "2em", marginTop: 0 }}>
+      <h2 style={{ fontSize: "2em", marginTop: 0, color: "#ff9400" }}>
         {funFact.title || "Informasjon"}
       </h2>
       <img src={funFact.pic} alt="funfact" style={{ maxHeight: "70vh" }} />

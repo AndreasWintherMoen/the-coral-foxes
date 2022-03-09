@@ -65,7 +65,7 @@ const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
 
   return (
     <div style={wrapperStyle} onMouseMove={onHover}>
-      <h2>{task.question}</h2>
+      <h2 style={{ color: "#ff9400" }}>{task.question}</h2>
       <img
         src={task.pic}
         alt=""
