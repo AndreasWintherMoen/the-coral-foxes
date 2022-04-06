@@ -14,7 +14,7 @@ function App() {
     );
   }
   if (currentPage === "Game") {
-    return <Gamepage onEndGame={() => setCurrentPage("FrontPage")} />;
+    return <Gamepage onEndGame2={() => setCurrentPage("FrontPage")} />;
   }
 }
 
