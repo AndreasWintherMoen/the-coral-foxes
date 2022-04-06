@@ -3,6 +3,13 @@ import gameModes from "./gameModes";
 const tasks = [
   {
     gameMode: gameModes.funFact,
+    title: "Dommedagsquizen",
+    fact: "Denne quizen er laget i formål om å informere om faremomenter rundt om kring i verden " +
+          "og hvordan man kan bruke satelitter til informasjon og prevensjon av de. " +
+          "Det er ikke tidspress på quizen så gjerne ta deg tiden til å lese over og tenke på spørsmålene før du svarer.",
+  },
+  {
+    gameMode: gameModes.funFact,
     pic: "/bleaching.jpeg",
     title: "Bleking av korallrev",
     fact: "29% av Great Barrier Reef er tapt pga klimaendringer. Enkelte rev over 90% tapt.",
