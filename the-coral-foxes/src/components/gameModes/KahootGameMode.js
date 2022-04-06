@@ -40,11 +40,11 @@ const KahootGameMode = ({ task, onSubmitAnswer }) => {
           alignContent: "center",
         }}
       />
-      <p style={{ fontSize: "2em" }}>
+      <p style={{color: "#ff9400", fontSize: "2em" }}>
         {showAnswer &&
           `Svaret var ${correctAnswer.current ? "riktig" : "feil"}`}
       </p>
-      <p style={{ fontSize: "2em" }}>
+      <p style={{color: "#ff9400", fontSize: "2em" }}>
         {showAnswer &&
           !correctAnswer.current &&
           `Riktig svar var ${task.answer}`}
