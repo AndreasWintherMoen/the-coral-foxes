@@ -28,18 +28,19 @@ const SliderKahootGameMode = ({ task, onSubmitAnswer }) => {
         width: "100vw",
       }}
     >
-      <h2>{task.question}</h2>
-      <ImageSlider
-        oldPic={task.pic1}
-        newPic={task.pic2}
-        style={{ maxWidth: "800px" }}
-      />
+      <h2 style={{ color: "#ff9400" }}>{task.question}</h2>
+      <div style={{ marginTop: "20px" }}></div>
+        <ImageSlider
+          oldPic={task.pic1}
+          newPic={task.pic2}
+          style={{ maxWidth: "800px" }}
+        />
       <div style={{ marginTop: "500px" }}></div>
       <p style={{ color: "#ff9400", fontSize: "2em" }}>
         {showAnswer &&
           `Svaret var ${correctAnswer.current ? "riktig" : "feil"}`}
       </p>
-      <p style={{ fontSize: "2em" }}>
+      <p style={{color: "#ff9400", fontSize: "2em" }}>
         {showAnswer &&
           !correctAnswer.current &&
           `Riktig svar var ${task.answer}`}
