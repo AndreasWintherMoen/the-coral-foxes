@@ -10,7 +10,7 @@ import calculateScore from "../utils/calculateScore";
 import Score from "../components/Score";
 import SliderKahootGameMode from "../components/gameModes/SliderKahootGameMode";
 
-const Gamepage = ({ onEndGame }) => {
+const Gamepage = ({ onEndGame2 }) => {
   const [index, setIndex] = useState(0);
   const [task, setTask] = useState(tasks[index]);
   const [totalScore, setScore] = useState(0);
@@ -26,8 +26,27 @@ const Gamepage = ({ onEndGame }) => {
   };
 
   const nextTask = () => setIndex(index + 1);
+  const scoreList = [
+    { name: "Andreas", score: 501 },
+    { name: "Kong Harald", score: 9000 },
+    { name: "Lars Monsen", score: 7654 },
+    { name: "Kim Possible", score: 3434 },
+    { name: "James Bond", score: 1007 },
+    { name: "Twitch-Mike", score: 5512 },
+    { name: "'OR 1=1", score: 666 },
+    { name: "Elvis Presley", score: 3852 },
+    { name: "GerahGeo", score: 3455 },
+    { name: "BigMike", score: 4045 },
+  ].sort((a, b) => (a.score < b.score ? 1 : -1));
 
-  if (!task) return <EndScreen score={totalScore} />;
+  const noTaskPage = (
+    <EndScreen
+      score={totalScore}
+      onEndGame={onEndGame2}
+      scoreList={scoreList}
+    />
+  );
+  if (!task) return noTaskPage;
 
   let gameMode = <div></div>;
 
@@ -53,7 +72,7 @@ const Gamepage = ({ onEndGame }) => {
       break;
     default:
       console.log(`could not find game mode ${task.gameMode}`);
-      gameMode = <EndScreen score={totalScore} />;
+      gameMode = noTaskPage;
       break;
   }
 

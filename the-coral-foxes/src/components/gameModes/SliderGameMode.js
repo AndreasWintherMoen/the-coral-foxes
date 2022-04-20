@@ -45,8 +45,8 @@ const Slider = ({ task, onSubmitAnswer }) => {
           marginLeft: '10%',
         }}
       >
-        <h2>{task.question}</h2>
-        <div style={{ marginTop: '1px' }}>
+        <h2 style={{ color: "#ff9400" }}>{task.question}</h2>
+        <div style={{ marginTop: "1px" }}>
           <DaysSlider
             onSubmitAnswer={onSubmitAnswer}
             max={task.max}
