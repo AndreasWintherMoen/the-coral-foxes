@@ -1,20 +1,20 @@
-import React, { useState, useRef } from "react";
-import Marker from "../Marker";
+import React, { useState, useRef } from 'react';
+import Marker from '../Marker';
 
 const wrapperStyle = {
-  width: "100%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  justifyItems: "center",
-  placeItems: "center",
-  alignContent: "center",
-  justifySelf: "center",
-  alignSelf: "center",
-  textAlign: "center",
-  backgroundImage: "url(/background_empty_space.jpg)",
-  height: "100vh",
-  width: "100vw",
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  justifyItems: 'center',
+  placeItems: 'center',
+  alignContent: 'center',
+  justifySelf: 'center',
+  alignSelf: 'center',
+  textAlign: 'center',
+  backgroundImage: 'url(/background_empty_space.jpg)',
+  height: '100vh',
+  width: '100vw',
 };
 
 const defaultMousePos = {
@@ -65,17 +65,12 @@ const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
 
   return (
     <div style={wrapperStyle} onMouseMove={onHover}>
-      <h2 style={{ color: "#ff9400" }}>{task.question}</h2>
       <img
         src={task.pic}
-        alt=""
+        alt=''
         ref={imgRef}
-        style={{ width: "1200px", justifySelf: "center" }}
+        style={{ width: '1200px', justifySelf: 'center', maxHeight: '50vh' }}
         onClick={placeMarker}
-        style={{
-          maxWidth: "50%",
-          maxHeight: "50%",
-        }}
       />
       <Marker pos={mousePos} bounds={bounds} />
       <Marker
@@ -84,6 +79,21 @@ const PlaceMarkerGameMode = ({ task, onSubmitAnswer }) => {
         hide={!showAnswer}
         isAnswerMarker
       />
+      <div
+        style={{
+          display: 'flex',
+          backgroundColor: '#F55900',
+          flexDirection: 'column',
+          border: '10px solid #6B0000',
+          color: '#6B0000',
+          // height: "15vh",
+          marginTop: '15px',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <p style={{ fontSize: '1.2em' }}>{task.question}</p>
+      </div>
     </div>
   );
 };
